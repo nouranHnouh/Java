@@ -1,0 +1,30 @@
+import java.util. *; 
+public class Average {
+
+	public static void main(String[] args) {
+		
+		int total=0;// calculate total 
+		int gradeCounter=1;// count grades
+		
+		//prompt user for input
+		Scanner scan=new Scanner(System.in);
+		
+		while(gradeCounter<=10) { //loop ten time
+			System.out.println("Enter garde: ");
+			//ask for integer value 
+			int grade=scan.nextInt();
+			total+=grade; // calculate the total of the grade 
+			gradeCounter+=1;// increment the counter 
+				
+		}//end while 
+		
+		double average=total/10.0; 
+		
+		//display total and average of grade 
+		System.out.printf("the total of all 10 grades is: %d%n", total);
+		System.out.printf("the average of the 10 grades is %.2f",average);
+		
+
+	}
+
+}

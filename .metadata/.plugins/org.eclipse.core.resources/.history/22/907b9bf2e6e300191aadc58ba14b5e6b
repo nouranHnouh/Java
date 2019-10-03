@@ -1,0 +1,38 @@
+
+import java.util.*; 
+
+public class SalesCalculatorTest {
+
+	public static void main(String[] args) {
+		
+		double value;
+		
+		int itemCounter=0;
+		Scanner scan=new Scanner(System.in);
+		SalesCalculator saleCalc=new SalesCalculator();
+		
+		System.out.print("Enter total value of sold item or -1 to quit: ");
+		value=scan.nextDouble();
+		while(value !=-1) {
+			saleCalc.setValue(value);
+			itemCounter++;
+			System.out.printf("item %d value is %.2f",itemCounter,saleCalc.getValue());
+			System.out.print("\nEnter total value of sold item or -1 to quit: ");
+			value=scan.nextDouble();
+			saleCalc.setValue(value);
+			itemCounter++;
+			System.out.printf("item is %d and value is %.2f",itemCounter,saleCalc.getValue());
+			
+			
+			
+			
+		}
+		if(saleCalc.getValue()>0)
+		
+			System.out.printf("\nthe gross sale for this week is: %.2f", saleCalc.calcSalesEarning());
+		
+		
+
+	}
+
+}

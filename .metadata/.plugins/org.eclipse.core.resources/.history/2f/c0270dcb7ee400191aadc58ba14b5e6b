@@ -1,0 +1,12 @@
+import java.util.*;
+public class SalaryCalculatorTest {
+
+	public static void main(String[] args) {
+		SalaryCalculator salary= new SalaryCalculator(20.0,30,"Jhon");
+		System.out.println(salary.getHour());
+		
+	
+
+	}
+
+}

@@ -1,0 +1,54 @@
+
+public class Employee {
+	private String firstName;
+	private String lastName; 
+	private double salary; 
+	
+	
+	public Employee(String fName,String lName,double salary) {
+		firstName=fName; 
+		lastName=lName; 
+		//salary must be positive 
+		if (salary>=0) {
+			this.salary=salary; 
+		}
+		
+	}// end of constructor 
+	
+	//set first name for the employee
+	public void setFirstName(String fName) {
+		firstName=fName; 
+	}// end setfirstName method 
+	
+	//set Last Name for employee
+	public void setLastName(String lName) {
+		lastName=lName; 
+	}// end of setLastname method 
+	
+	//set the salary for the employee 
+	public void setSalary(double salary) {
+		this.salary=salary;
+		
+	}// end the salary method 
+	
+	//get the employee first name 
+	public String getFirstName() {
+		return firstName; 
+	}//end getFirstName method 
+	
+	//return the Last Name  of employee
+	public String getLastName() {
+		return lastName;
+		
+	}//end of getlastName
+	
+	//return the salary of the employee
+	public double getSalary() {
+		return salary;  
+	}//end of getSalry method 
+	
+	
+	
+
+
+}// end of class employee

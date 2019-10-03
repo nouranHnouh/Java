@@ -1,0 +1,36 @@
+import java.util. *; 
+public class GasMileageTest {
+
+	public static void main(String[] args) {
+		GasMileage mile=new GasMileage();
+		Scanner scan=new Scanner(System.in);
+		int miles;
+		int gallons;
+		
+		System.out.print("Enter miles for the driver or -1 to quit: ");
+		miles=scan.nextInt();
+		System.out.print("Enter gallon used or -1 to quit: ");
+		gallons=scan.nextInt();
+		System.out.printf(" \n The miles per gallons "
+				+ "for each trip is %.2f: ",mile.TripMileage(miles, gallons));
+		while(miles!=-1 || gallons!=-1) {
+			System.out.print("Enter miles for the driver or -1 to quit: ");
+			miles=scan.nextInt();
+			System.out.print("Enter gallon used or -1 to quit: ");
+			gallons=scan.nextInt();
+			System.out.printf(" \n The miles per gallons "
+					+ "for each trip is %.2f: ",mile.TripMileage(miles, gallons));
+			
+			
+			
+		}
+		System.out.print("the miles per gallons"
+				+ "for total trips is : ");
+		mile.totalTripMileage();
+		
+		
+
+	
+	}//end main
+
+}// end class GasMileageTest

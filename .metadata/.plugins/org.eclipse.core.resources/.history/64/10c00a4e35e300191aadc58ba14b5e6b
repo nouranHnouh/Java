@@ -1,0 +1,65 @@
+import java.util.*; 
+/**
+ * this Java Application is Mileage that keep track 
+ * of several trips by asking user for input gallons
+ * and miles and calculate and display miles
+ * per gallon for each trip and print the combined for each trip
+ * @author nourannouh
+ *
+ */
+public class GasMileage {
+	private int totalMiles;
+	private int totalGallons;
+	Scanner scan=new Scanner(System.in); 
+	
+	//constructor to initialize 
+	//instance variables
+	public GasMileage(int miles,int gallons) {
+		//check that user enter valid values
+		if(miles>0)
+			this.totalMiles=miles;
+		if(gallons>0)
+			this.totalGallons=gallons; 
+	}//end constructor 
+	
+	public void setMile(int mile) {
+		totalMiles=mile; 
+	}//end setMile method 
+	
+	public int getMiles() {
+		return totalMiles;
+		
+		
+	}
+	
+	public void setGallon(int gallon) {
+		totalGallons=gallon;
+	
+	}
+	
+	public int getGallon() {
+		return totalGallons; 
+	}
+	
+	public double totalTripMileage(int miles,int gallons) {
+		totalMiles= + miles; 
+		totalGallons= + gallons; 
+		double value= (double) totalMiles/totalGallons;
+		return value; 
+		
+		
+		
+			
+		
+	}//end 
+	
+		
+		
+ 
+
+	
+	
+
+}// end GasMileage 
+
+

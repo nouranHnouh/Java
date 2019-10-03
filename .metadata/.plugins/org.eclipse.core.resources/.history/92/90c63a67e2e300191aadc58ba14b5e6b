@@ -1,0 +1,34 @@
+
+public class SalesCalculator {
+	private int itemNo;
+	private double value;
+	
+	public SalesCalculator() {
+		this.itemNo=0;
+		this.value=0.0;
+	}
+	
+	public void setItemNo (int item) {
+		itemNo=item;
+		
+	}
+	
+	public int getItemNo() {
+		return itemNo; 
+	}
+	
+	public void setValue(double value) {
+		this.value=value;
+	}
+	
+	public double getValue() {
+		return value; 
+	}
+	
+	public double calcSalesEarning() {
+		double earningSalary;
+		earningSalary=200+(9/100)*getValue(); 
+		return earningSalary;
+	}
+
+}

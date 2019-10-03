@@ -1,0 +1,181 @@
+/**
+ * MadLib Class is a phrasal template game
+ * where one player prompt others for a list 
+ * of words to complete a story 
+ * it has inputWord() method which ask user for list of words
+ * @author nourannouh
+ *@version 1.0
+ *@since 2019-09-25 CST8110 
+ */
+
+import java.util. *; 
+
+public class MadLib {
+	
+	private String childToyNouh0009; //child toy 
+	
+	private String nounNouh0009; // noun
+	
+	private String adjNouh0009; //adjective 
+	
+	private String noun2Nouh0009; //noun  
+	
+	private String nounPluralNouh0009; // noun plural
+	
+	private String noun2PluralNouh0009; // second noun plural
+	
+	private String verbNouh0009; // verb ends with s
+	
+	private String nameNouh0009; //name  
+	
+	private String colorNouh0009; //color
+
+	private String placeNouh0009; //country
+	
+	private String feelingNouh0009; // feeling 
+	
+	
+	
+	// Scanner takes the input from the user 
+	Scanner scan= new Scanner(System.in); 
+	
+	//default constructor, initialize instance variable to empty string   
+	public MadLib() {
+		
+		childToyNouh0009=" ";  
+		
+		nounNouh0009=" "; 
+		 
+		 adjNouh0009=" "; 
+		 
+		 nounPluralNouh0009=" ";
+		 
+		 verbNouh0009=" "; 
+		 
+		 nameNouh0009=" "; 
+		 
+		 noun2Nouh0009=" "; 
+		 
+		 noun2PluralNouh0009=" "; 
+		 
+		 colorNouh0009=" ";
+		 
+		 placeNouh0009=" "; 
+		 		
+	}//end of constructor 
+	
+	
+	//method inputWord, ask user for a list of words
+	public void inputWord() {
+		
+		System.out.println("Please enter noun: ");
+		nounNouh0009=scan.nextLine(); 
+		
+		System.out.println("Please enter child toy: ");
+		childToyNouh0009=scan.nextLine(); 
+		
+		System.out.println("Please enter your feeling: ");
+		feelingNouh0009=scan.nextLine();
+		
+		System.out.println("Please enter a Name : " );
+		nameNouh0009=scan.nextLine();
+		
+		System.out.println("Please enter a place : ");
+		placeNouh0009=scan.nextLine(); 
+		
+		System.out.println("Please enter verb ending in 's' : ");
+		verbNouh0009=scan.nextLine();
+		
+		System.out.println("Please enter an adjective: ");
+		adjNouh0009=scan.nextLine(); 
+		
+		System.out.println("please Enter color: "); 
+		colorNouh0009=scan.nextLine(); 
+		
+		System.out.println("Please enter noun : ");
+		noun2Nouh0009=scan.nextLine();
+		
+		System.out.println("Please enter noun(plural): ");
+		nounPluralNouh0009=scan.nextLine(); 
+		
+		System.out.println("Please enter noun(plural):" );
+		noun2PluralNouh0009=scan.nextLine();  
+		
+	}// end method inputWord()
+	
+	
+	//capitalFirstLetter method make first 
+	//letter in the string Capital 
+	
+	public void capitalFirstLetter () {
+		
+		 nounNouh0009=nounNouh0009.substring(0,1).toUpperCase()
+				 + nounNouh0009.substring(1).toLowerCase(); 
+		
+		childToyNouh0009=childToyNouh0009.substring(0,1).toUpperCase()
+				 + childToyNouh0009.substring(1).toLowerCase(); 
+		
+		adjNouh0009=adjNouh0009.substring(0,1).toUpperCase()
+				  + adjNouh0009.substring(1).toLowerCase(); 
+		 
+		 nounPluralNouh0009=nounPluralNouh0009.substring(0,1).toUpperCase()
+				 + nounPluralNouh0009.substring(1).toLowerCase(); 
+		 
+		 verbNouh0009=verbNouh0009.substring(0,1).toUpperCase()
+				 + verbNouh0009.substring(1).toLowerCase(); 
+		 
+		 nameNouh0009= nameNouh0009.substring(0,1).toUpperCase()
+				 + nameNouh0009.substring(1).toLowerCase(); 
+		 
+		 noun2Nouh0009= noun2Nouh0009.substring(0,1).toUpperCase()
+				 + noun2Nouh0009.substring(1).toLowerCase(); 
+		 
+		 noun2PluralNouh0009= noun2PluralNouh0009.substring(0,1).toUpperCase()
+				 + noun2PluralNouh0009.substring(1).toLowerCase(); 
+		 
+		 feelingNouh0009= feelingNouh0009.substring(0,1).toUpperCase()
+				 + feelingNouh0009.substring(1).toLowerCase(); 
+		 
+		 placeNouh0009= placeNouh0009.substring(0,1).toUpperCase()
+				 + placeNouh0009.substring(1).toLowerCase(); 
+		 
+		 colorNouh0009=colorNouh0009.substring(0,1).toUpperCase()
+				 + colorNouh0009.substring(1).toLowerCase(); 
+	 
+		
+	}//end of CapitalLetter method 
+	
+	
+	//display the story with missing words
+	public void displayWord() {
+		
+		//make first letter capital and call the method capitalFirstLetter()  
+		capitalFirstLetter();  
+		
+		//display formatted list of words with story 
+		System.out.println("\n my " +nounNouh0009+ " like to play with a " + childToyNouh0009 
+				+" she feels " + feelingNouh0009+ " with her new toy, " 
+				+ " she named her new toy " + nameNouh0009);
+		
+		System.out.println (" in " +placeNouh0009+ " she  "+verbNouh0009 + " and play with her classmates. " +
+		"the weather is "+ adjNouh0009+ " she wears a floury " +colorNouh0009 
+				+ " dress " );
+		
+		System.out.println(" it is her friend birthday, she went to the  "
+					+noun2Nouh0009+ " there are lots of "+ nounPluralNouh0009+
+				 " and she ate a lot of "+ noun2PluralNouh0009); 
+		
+		
+		
+		
+		
+	}// end of display 
+	
+	public static void main(String [] args) {
+		MadLib madLib1=new MadLib(); 
+		madLib1.inputWord();
+		madLib1.displayWord(); 
+		
+	}
+
+}// end class MadLib

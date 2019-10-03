@@ -1,0 +1,55 @@
+import java.util.*; 
+
+public class GasMileage {
+	private int totalMiles;
+	private int totalGallons;
+	Scanner scan=new Scanner(System.in); 
+	
+	public GasMileage(int miles,int gallons) {
+		if(miles>0)
+			this.totalMiles=miles;
+		if(gallons>0)
+			this.totalGallons=gallons; 
+	}//end constructor 
+	
+	public void setMile(int mile) {
+		totalMiles=mile; 
+	}//end setMile method 
+	
+	public int getMiles() {
+		return totalMiles;
+		
+		
+	}
+	
+	public void setGallon(int gallon) {
+		totalGallons=gallon;
+	
+	}
+	
+	public int getGallon() {
+		return totalGallons; 
+	}
+	
+	public double  calcMileGallon(int miles,int gallons) {
+		totalMiles= + miles; 
+		totalGallons= + gallons; 
+		double value= (double) totalMiles/totalGallons;
+		return value; 
+		
+		
+		
+			
+		
+	}
+	
+		
+		
+ 
+
+	
+	
+
+}// end GasMileage 
+
+

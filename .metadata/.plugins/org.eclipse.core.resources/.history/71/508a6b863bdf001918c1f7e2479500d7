@@ -1,0 +1,156 @@
+/**
+ * MadLib Class is a phrasal template game
+ * where one player prompt others for a list 
+ * of words to complete a story 
+ * it has inputWord() method which ask user for list of words
+ * @author nourannouh
+ *@version 1.0
+ *@since 2019-09-25 CST8110 
+ */
+
+import java.util. *; 
+
+public class MadLib {
+	
+	private String adjNouh0009; 
+	private String colorNouh0009; 
+	private String nounNouh0009; 
+	private String noun2Nouh0009; 
+	private String noun3Nouh0009; 
+	private String nounPluralNouh0009; 
+	private String noun2PluralNouh0009; 
+	private String noun3PluralNouh0009; 
+	private String verbNouh0009; 
+	private String nameNouh0009; 
+	
+	
+	// Scanner takes the input from the user 
+	Scanner scan= new Scanner(System.in); 
+	
+	//default constructor, initialize instance variable to empty string   
+	public MadLib() {
+		 adjNouh0009=" "; //adjective 
+		 
+		 colorNouh0009=" "; //color
+		 
+		 nounNouh0009=" "; // noun
+		 
+		 nounPluralNouh0009=" ";//noun plural 
+		 
+		 verbNouh0009=" "; // verb ends with s
+		 
+		 nameNouh0009=" "; // name
+		 
+		 noun2Nouh0009=" "; // second noun
+		 
+		 noun3Nouh0009=" "; //third noun
+		 
+		 noun2PluralNouh0009=" "; // second plural noun
+		 
+		 noun3PluralNouh0009=" "; //third plural noun 
+		 
+		
+		
+	}//end of constructor 
+	
+	
+	//method inputWord, ask user for a list of words
+	public void inputWord() {
+		System.out.println("Please enter noun(plural): ");
+		nounPluralNouh0009=scan.nextLine(); 
+		
+		System.out.println("Please enter an adjective: ");
+		adjNouh0009=scan.nextLine(); 
+		
+		System.out.println("Please enter noun: ");
+		nounNouh0009=scan.nextLine(); 
+		
+		System.out.println("Please enter noun(plural):" );
+		noun2PluralNouh0009=scan.nextLine(); 
+		
+		System.out.println("Please enter noun(plural): ");
+		noun3PluralNouh0009=scan.nextLine(); 
+		
+		System.out.println("Please enter noun : ");
+		noun2Nouh0009=scan.nextLine();
+		
+		System.out.println("Please enter verb ending in 's' : ");
+		verbNouh0009=scan.nextLine();
+		
+		System.out.println("Please enter noun : ");
+		noun3Nouh0009=scan.nextLine(); 
+		
+		
+		System.out.println("Please enter Response Name : " );
+		nameNouh0009=scan.nextLine();
+		
+		System.out.println("please Enter color: "); 
+		colorNouh0009=scan.nextLine(); 
+	
+	
+	}// end method inputWord()
+	
+	
+	//capitalFirstLetter method make first 
+	//letter in the string Capital 
+	
+	public void capitalFirstLetter () {
+		 adjNouh0009=adjNouh0009.substring(0,1).toUpperCase()
+				  + adjNouh0009.substring(1).toLowerCase(); 
+		 
+		 colorNouh0009=colorNouh0009.substring(0,1).toUpperCase()
+				 + colorNouh0009.substring(1).toLowerCase();  
+		 
+		 nounNouh0009=nounNouh0009.substring(0,1).toUpperCase()
+				 + nounNouh0009.substring(1).toLowerCase(); 
+		 
+		 nounPluralNouh0009=nounPluralNouh0009.substring(0,1).toUpperCase()
+				 + nounPluralNouh0009.substring(1).toLowerCase(); 
+		 
+		 verbNouh0009=verbNouh0009.substring(0,1).toUpperCase()
+				 + verbNouh0009.substring(1).toLowerCase(); 
+		 
+		 nameNouh0009=nameNouh0009.substring(0,1).toUpperCase()
+				 + nameNouh0009.substring(1).toLowerCase(); 
+		 
+		 noun2Nouh0009=noun2Nouh0009.substring(0,1).toUpperCase()
+				 + noun2Nouh0009.substring(1).toLowerCase(); 
+		 
+		 noun3Nouh0009=noun3Nouh0009.substring(0,1).toUpperCase()
+				 + noun3Nouh0009.substring(1).toLowerCase(); 
+		 
+		 noun2PluralNouh0009= noun2PluralNouh0009.substring(0,1).toUpperCase()
+				 + noun2PluralNouh0009.substring(1).toLowerCase(); 
+		 
+		 noun3PluralNouh0009=noun2PluralNouh0009.substring(0,1).toUpperCase()
+				 + noun2PluralNouh0009.substring(1).toLowerCase(); 
+		 
+		
+	}//end of CapitalLetter method 
+	
+	
+	//display the story with missing words
+	public void displayWord() {
+		System.out.println(" \nthis morning my " + nounPluralNouh0009 
+				+" and I, woke up feeling " + adjNouh0009);
+		System.out.println (" me and my "+ nounNouh0009 + " are wearing a "+ colorNouh0009 + " dress, to celebrate ");
+		System.out.println(nameNouh0009+" birthday "+ ",we are buying lots of "+noun2PluralNouh0009
+				+ " and we are going to the " +noun2Nouh0009);
+		System.out.println(" in the "+noun2Nouh0009+ " there are lots of "+ noun3PluralNouh0009
+				+ " I "+ verbNouh0009+ " when the music was on  "); 
+		
+		System.out.println(" the weather was bad it was "+ noun3Nouh0009); 
+		
+		
+		
+	}// end of display 
+	
+	public static void main(String [] args) {
+		MadLib madLib1=new MadLib(); 
+		madLib1.inputWord();
+		madLib1.capitalFirstLetter(); 
+		madLib1.displayWord(); 
+		
+	}
+
+}// end class MadLib

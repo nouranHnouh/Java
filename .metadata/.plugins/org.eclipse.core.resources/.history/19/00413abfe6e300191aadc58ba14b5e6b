@@ -1,0 +1,25 @@
+
+public class SalesCalculator {
+	
+	private double value;
+	
+	public SalesCalculator() {
+		this.value=0.0;
+	}
+	
+	
+	public void setValue(double value) {
+		this.value+= value;
+	}
+	
+	public double getValue() {
+		return value; 
+	}
+	
+	public double calcSalesEarning() {
+		double earningSalary;
+		earningSalary=200+(9/100)*getValue(); 
+		return earningSalary;
+	}
+
+}
