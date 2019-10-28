@@ -1,60 +1,48 @@
 
 public class Employee {
-	private String firstName;
-	private String lastName; 
-	private double salary; 
+	private String fName;
+	private String lName;
+	private double monthlySalary;
 	
+	public Employee(String fName,String lName, double monthlySalary) {
+		this.fName=fName;
+		this.lName=lName;
+		this.monthlySalary=monthlySalary;
+	}//end of constructor 
 	
-	public Employee(String fName,String lName,double salary) {
-		firstName=fName; 
-		lastName=lName; 
-		//salary must be positive 
-		if (salary>=0) {
-			this.salary=salary; 
-		}
+	public void setFName(String fName) {
+		this.fName=fName;
 		
-	}// end of constructor 
+	}//end of setFName
 	
-	//set first name for the employee
-	public void setFirstName(String fName) {
-		firstName=fName; 
-	}// end setfirstName method 
+	public void setLName(String lName) {
+		this.lName=lName;
+	}//end setLName
 	
-	//set Last Name for employee
-	public void setLastName(String lName) {
-		lastName=lName; 
-	}// end of setLastname method 
-	
-	//set the salary for the employee 
-	public void setSalary(double salary) {
-		this.salary=salary;
+	public void setMonthlySalary(double monthlySalary) {
+		this.monthlySalary=monthlySalary;
 		
-	}// end the salary method 
+	}//end setMonthlySlary
 	
-	//get the employee first name 
-	public String getFirstName() {
-		return firstName; 
-	}//end getFirstName method 
-	
-	//return the Last Name  of employee
-	public String getLastName() {
-		return lastName;
-		
-	}//end of getlastName
-	
-	//return the salary of the employee
-	public double getSalary() {
-		return salary;  
-	}//end of getSalry method 
-	
-	//raise salary by persentage value 
-	public double Raise(double value) {
-		salary+=(salary/100)*value; 
-		return salary; 
+	public String getFName() {
+		return fName;
 	}
 	
+	public String getLName() {
+		return lName;
+	}
 	
+	public double getMonthlySalary() {
+		return monthlySalary; 
+	}
 	
+	public void display() {
+		System.out.printf("%s %s monthly salary is: %.2f ",fName,lName,monthlySalary);
+	} 
+	// new salary=(old salary*raise)+old salary 
+	public double setRaise(double percentage) {
+		 monthlySalary+=(monthlySalary/100)*percentage ; 
+		 return monthlySalary; 
+	}
 
-
-}// end of class employee
+}
