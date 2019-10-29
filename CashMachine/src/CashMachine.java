@@ -1,5 +1,10 @@
 import java.util.*;
-
+/**
+ * cashMachine class ask user for item name 
+ * and item price and print receipt for that
+ * @author Nouran Nouh
+ *
+ */
 
 public class CashMachine {
 	Scanner consoleInput=new Scanner(System.in);
@@ -14,11 +19,11 @@ public class CashMachine {
 		itemCount=0;
 		this.tax=tax;
 		sum=0.0;
-		receipt=" ";
+		receipt="";
 	}//end constructor 
 	
 	//get item name 
-	public String getOneStringInput(String input) {
+	private String getOneStringInput(String input) {
 		System.out.print(input);
 		String itemName=consoleInput.next(); 
 		return itemName;  
@@ -26,36 +31,42 @@ public class CashMachine {
 	}//end getOneStringInput method 
 	
 	//get item price 
-	public double getOneDoubleInput(String input) {
+	private double getOneDoubleInput(String input) {
 		
 		System.out.print(input);
 		double itemPrice=consoleInput.nextDouble();
-		String d= String.format("%.2f" ,itemPrice);
-		return Double.parseDouble(d); 
+		return itemPrice; 
 		
 	
 	}//end getOneDoubleInput method 
 	
 	//get the itemCount 
-	public int getItemCount() {
+	private int getItemCount() {
+		itemCount++;
 		return itemCount; 
 		
 	}//end getItemCount 
 	
 	//calculate tax for the items 
-	public double calculateTax() {
+	private double calculateTax() {
 		double calcTax=0.0;
 		calcTax=sum*tax;
 		return calcTax; 
 		
 	}//end calculateTax method
 	
-	public double calculateTaxPlusSum() {
+	//calculate total sum of the item plus tax
+	
+	private double calculateTaxPlusSum() {
 		  return sum+calculateTax();
 		   
 		 
-	}
+	}//end calculateTaxPlusSum method
 	
+	//process the menu of the user 
+	//if user entered one purchase item,
+	//if user entered 2 print receipt 
+	//else quit 
 	public boolean processMenu() {
 		double oneDouble=getOneDoubleInput("Action>>");
 		if (oneDouble==1) {
@@ -66,20 +77,23 @@ public class CashMachine {
 		}else {
 			return false;
 			
-		}
+		}//end else
 		
 	
 		return true;
-	}
+	}//end processMenu
 	
-	public void purchaseItem() {
+	//ask user to purchaseItem by
+	//entering item name and 
+	
+	private void purchaseItem() {
 		String itemName; 
 	    itemName=getOneStringInput("item name(no space)>>");
 		double itemPrice;
 		itemPrice=getOneDoubleInput("item price>>");
-		itemCount++; 
-		sum=sum+itemPrice;
-		receipt=receipt+String.format("%-15s$%.2f%n",itemName,itemPrice); 
+		getItemCount(); //increment count 
+		sum+=itemPrice;
+		receipt+=String.format("%-15s$%.2f%n",itemName,itemPrice); 
 		
 		
 	}
@@ -93,14 +107,16 @@ public class CashMachine {
 		
 	}
 	
-	public void printReceipt() {
+	private void printReceipt() {
 		if(itemCount==0) {
-			System.out.print("Empty");
+			System.out.println("\nEmpty");
 		}else {
 			System.out.print("Receipt for 3 items:");
 			System.out.print("\n\n"+receipt);
 			double total=calculateTaxPlusSum();
-			System.out.printf("\n\nTax:$%15.2f%nTotal:$%13.2f ",tax,total);
+			
+			System.out.printf("\n\n%-15s$%.2f%n%-15s$%.2f ","Tax:",
+					tax,"Total:",total);
 			System.out.println(); 
 		}
 		
