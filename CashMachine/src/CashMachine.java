@@ -111,7 +111,7 @@ public class CashMachine {
 		if(itemCount==0) {
 			System.out.println("\nEmpty");
 		}else {
-			System.out.print("Receipt for 3 items:");
+			System.out.print("Receipt for "+ itemCount+ " items:");
 			System.out.print("\n\n"+receipt);
 			double total=calculateTaxPlusSum();
 			
